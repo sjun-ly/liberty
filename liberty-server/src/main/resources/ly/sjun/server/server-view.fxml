@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ly.sjun.server.fxcontroller.ServerController">
+   <children>
+      <ScrollPane prefHeight="400.0" prefWidth="325.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="397.0" prefWidth="322.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="25.0" layoutY="10.0" prefHeight="43.0" prefWidth="273.0" style="-fx-border-color: white; -fx-border-radius: 100;" text="本次启动连接历史记录" textFill="#ff0606">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <VBox fx:id="history" layoutX="3.0" layoutY="56.0" prefHeight="334.0" prefWidth="315.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <VBox layoutX="325.0" prefHeight="400.0" prefWidth="275.0">
+         <children>
+            <Pane prefHeight="241.0" prefWidth="275.0">
+               <children>
+                  <Label fx:id="havingConnect" alignment="CENTER" layoutX="33.0" layoutY="10.0" prefHeight="44.0" prefWidth="207.0" style="-fx-border-radius: 100; -fx-border-color: white;" text="当前没有连接" textFill="RED">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="8.0" layoutY="61.0" prefHeight="171.0" prefWidth="261.0">
+                     <children>
+                        <Label fx:id="currentConnect" alignment="CENTER" layoutX="32.0" layoutY="9.0" prefHeight="153.0" prefWidth="214.0" textFill="RED" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane opacity="0.28" prefHeight="2.0" prefWidth="275.0" style="-fx-background-color: black;" />
+            <Pane prefHeight="153.0" prefWidth="275.0">
+               <children>
+                  <Button layoutX="14.0" layoutY="113.0" mnemonicParsing="false" onAction="#exitLiberty" prefHeight="29.0" prefWidth="86.0" text="关闭服务" textFill="RED" />
+                  <VBox prefHeight="94.0" prefWidth="275.0">
+                     <children>
+                        <Label text="当前密钥：" textFill="RED">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="key" alignment="CENTER" prefHeight="74.0" prefWidth="275.0" textFill="RED" wrapText="true" />
+                     </children>
+                  </VBox>
+                  <Label layoutX="110.0" layoutY="110.0" prefHeight="35.0" prefWidth="159.0" text="注意：关闭服务客户端将断开连接！" textFill="RED" wrapText="true">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

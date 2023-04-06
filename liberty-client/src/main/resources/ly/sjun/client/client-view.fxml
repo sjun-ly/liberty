@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ly.sjun.client.fxcontroller.ClientController">
+   <center>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="TOP_CENTER" />
+   </center>
+   <top>
+      <Pane prefHeight="0.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Pane prefHeight="400.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="400.0" prefWidth="0.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <Pane prefHeight="30.0" prefWidth="598.0" style="border: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="23.0" layoutY="3.0" mnemonicParsing="false" onAction="#closeConnect" text="关闭连接" />
+            <Label layoutX="99.0" layoutY="5.0" prefHeight="15.0" prefWidth="483.0" text="注：如果没有加载，请确认密钥/是否有别人连接了，退出重进或者是重启服务端。" textFill="RED">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
